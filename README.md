@@ -17,17 +17,9 @@ The dataset consists of grayscale images in JPG and PNG format.
 
 ### Directory Structure
 ```shell
-data/
+datasets/
 ├── train/
 ```
-
-## Data Access
-
-All data is included in this repository under the `data/` directory.
-
-If you are using a subset or need preprocessing, refer to:
-
-***scripts/preprocess.py***
 
 ---
 
@@ -37,15 +29,18 @@ This repository includes Python code for training and inference.
 
 ### Main Files
 - `train.py` – training pipeline
-- `infer.py` – inference script
-- `model.py` – model definition
+- `validate.py` – validate script
+- `model_pool.py` – model_pool definition
 
 ---
 
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+conda create -n cv python=3.12 -y
+conda activate cv
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+pip install opencv-python
 ```
 ---
 
@@ -53,12 +48,12 @@ pip install -r requirements.txt
 
 #### Training
 ```shell
-python src/vision/train.py --data_path data/train/
+python src/vision/train.py
 ```
 
 #### Inference
 ```shell
-python src/vision/infer.py --input examples/demo.jpg
+python src/vision/infer.py
 ```
 
 ---
@@ -66,9 +61,9 @@ python src/vision/infer.py --input examples/demo.jpg
 
 To ensure reproducibility:
 
-
 - Validation threshold: 0.5
 - Inference threshold: 0.70
+
 Hardware: [optional, e.g., NVIDIA 4090, NVIDIA 4060ti]
 
 ---
@@ -79,4 +74,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For questions, please contact: [xxx@xxx.com]
+For questions, please contact: [abcn@qq.com]
