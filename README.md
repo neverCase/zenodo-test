@@ -1,7 +1,7 @@
 # Zendo test
 
 ## Overview
-This repository provides the dataset and source code used in our study on [your task, e.g., anomaly detection on EM images].
+This repository provides the dataset and source code used in our study on anomaly detection on EM images.
 
 ---
 
